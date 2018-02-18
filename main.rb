@@ -5,6 +5,9 @@ def read_contacts
   return JSON.parse(contacts_json, { symbolize_names: true })
 end
 
+def map
+  contacts = read_contacts
+  print contacts.map {|contact| {contact[:name] => contact[:phone]}}
+end
 
-contacts = read_contacts
-print contacts.map {|contact| {contact[:name] => contact[:phone]}}
+map
