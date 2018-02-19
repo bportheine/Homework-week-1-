@@ -26,14 +26,14 @@ end
 def contact_reduce_phone
   phone = @contacts.select {|contact| contact[:phone].include? "+1"}
   print "Number of contacts: "
-  print phone.reduce(0) {|sum, contact| sum += (contact.count/3)}
+  print phone.reduce(0) {|sum, contact| sum += (contact = 1)}
   puts
 end
 
 def contact_reduce_email
   email = @contacts.select {|contact| contact[:email].include? ".org"}
   print "Number of contacts: "
-  print email.reduce(0) {|sum, contact| sum += (contact.count/3)}
+  print email.reduce(0) {|sum, contact| sum += (contact = 1)}
   puts
 end
 
